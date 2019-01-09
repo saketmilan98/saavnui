@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/linearL"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/linearL"
+        android:layout_height="50dp"
+        android:layout_above="@+id/bottom_navigation"
+        android:background="#0000FF"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_gravity="start"
+            android:src="@drawable/tchehre"/>
+        <LinearLayout
+            android:layout_width="260dp"
+            android:layout_height="45dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="220dp"
+                android:layout_height="25dp"
+                android:text="Chehre"
+                android:textAlignment="center"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/white"
+                android:textSize="15sp"/>
+            <TextView
+                android:layout_width="220dp"
+                android:layout_height="20dp"
+                android:text="hindi"
+                android:textAlignment="center"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/white"
+                android:textSize="12sp"/>
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentBottom="true"
+            android:src="@drawable/ic_play_arrow_black_24dp"/>
+
+    </LinearLayout>
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="?android:attr/windowBackground"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/bottom_navigation" />
+
+</RelativeLayout>
